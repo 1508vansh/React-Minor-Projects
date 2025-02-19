@@ -1,0 +1,10 @@
+# Ignore node_modules and build files
+node_modules/
+dist/
+.parcel-cache/
+package-lock.json
+
+# Ignore logs and environment files
+*.log
+.env
+.DS_Store
