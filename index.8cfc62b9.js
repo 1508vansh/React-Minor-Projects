@@ -18912,8 +18912,7 @@ function Body() {
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "Profiles",
-                children: Profile.map((user)=>{
-                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
+                children: Profile.map((user, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).Fragment, {
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "card",
                             children: [
@@ -18922,15 +18921,15 @@ function Body() {
                                     alt: "profile-pic"
                                 }, void 0, false, {
                                     fileName: "body.js",
-                                    lineNumber: 49,
-                                    columnNumber: 29
+                                    lineNumber: 47,
+                                    columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
                                     children: user.login
                                 }, void 0, false, {
                                     fileName: "body.js",
-                                    lineNumber: 50,
-                                    columnNumber: 29
+                                    lineNumber: 48,
+                                    columnNumber: 9
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                     href: user.html_url,
@@ -18938,21 +18937,24 @@ function Body() {
                                     children: "View Profile"
                                 }, void 0, false, {
                                     fileName: "body.js",
-                                    lineNumber: 51,
-                                    columnNumber: 29
+                                    lineNumber: 49,
+                                    columnNumber: 9
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "body.js",
-                            lineNumber: 48,
-                            columnNumber: 25
+                            lineNumber: 46,
+                            columnNumber: 7
                         }, this)
-                    }, void 0, false);
-                })
+                    }, user.id || index, false, {
+                        fileName: "body.js",
+                        lineNumber: 45,
+                        columnNumber: 5
+                    }, this))
             }, void 0, false, {
                 fileName: "body.js",
                 lineNumber: 43,
-                columnNumber: 9
+                columnNumber: 8
             }, this)
         ]
     }, void 0, true);
