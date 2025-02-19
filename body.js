@@ -40,21 +40,18 @@ function Body(){
          <input className='searchName' type="text" onChange={(e)=>setName(e.target.value)} placeholder="Search By Name..."/>
          <button className='NameButton'onClick={()=>getProfile(Number,Name,true)}>Search</button>
        </div>
-        <div className="Profiles">
-            {
-                Profile.map((user)=>{
-                    return(
-                        <>
-                        <div className='card'>
-                            <img src={user.avatar_url} alt="profile-pic"/>
-                            <h2>{user.login}</h2>
-                            <a href={user.html_url} target='_blank'>View Profile</a>
-                        </div>
-                        </>
-                    );
-            })
-        }
-        </div>
+       <div className="Profiles">
+  {Profile.map((user, index) => (
+    <React.Fragment key={user.id || index}>
+      <div className='card'>
+        <img src={user.avatar_url} alt="profile-pic" />
+        <h2>{user.login}</h2>
+        <a href={user.html_url} target='_blank'>View Profile</a>
+      </div>
+    </React.Fragment>
+  ))}
+</div>
+
        </>
     );
 }
